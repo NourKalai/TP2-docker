@@ -1,4 +1,5 @@
 pipeline{
+    def app
     agent any
     tools{
         maven 'maven3'
@@ -20,10 +21,8 @@ pipeline{
             steps {                
                 script {
                     echo "======== executing ========"
-                        // sh "mvn clean package"
-            
-                        // sh "docker build -t devopstp ."
-                       sh "docker image build -t custom-jenkins-docker ."                       }            
+                       app = docker.build("nourkalai/demo")
+                                             }            
                         }
                     } 
      
