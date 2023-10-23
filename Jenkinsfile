@@ -23,8 +23,7 @@ pipeline{
                         // sh "mvn clean package"
             
                         // sh "docker build -t devopstp ."
-                        sh"docker build ."
-                       }            
+                       sh "docker image build -t custom-jenkins-docker ."                       }            
                         }
                     } 
      
