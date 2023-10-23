@@ -20,9 +20,10 @@ pipeline{
             steps {                
                 script {
                     echo "======== executing ========"
-                        sh "mvn clean package"
+                        // sh "mvn clean package"
             
-                        sh "docker build -t devopstp ."
+                        // sh "docker build -t devopstp ."
+                        sh"docker build ."
                        }            
                         }
                     } 
