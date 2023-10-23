@@ -1,5 +1,11 @@
 pipeline{
     agent any
+    tools{
+        maven 'maven3'
+    }
+    environment {
+    DOCKERHUB_CREDENTIALS = credentials('dockerhub')
+  }
     stages{
         stage("getting code") {
             steps {
